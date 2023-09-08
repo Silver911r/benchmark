@@ -1,3 +1,9 @@
+import time
+import random
+import sqlite3
+import pandas as pd
+import dask.dataframe as dd
+
 # Initialize Dask DataFrame
 df = dd.from_pandas(pd.DataFrame({'key': [f'key_{i}' for i in range(n)], 'value': [f'value_{i}' for i in range(n)]}), npartitions=5)
 
